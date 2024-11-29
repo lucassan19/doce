@@ -1,0 +1,198 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5ebe0;
+  color: #4b3f35;
+}
+
+/* Cabeçalho */
+.header {
+  text-align: center;
+  padding: 20px;
+  background-color: #f5ebe0;
+}
+
+.titulo {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.logo-destaque {
+  width: 80px;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Seção de descrição */
+.descricao {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.descricao h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+ 
+}
+
+.descricao p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Cardápio */
+.cardapio {
+  padding: 20px;
+  text-align: center;
+}
+
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.produto {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.produto:hover {
+  transform: scale(1.05);
+}
+
+.produto img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.produto p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+/* Botões */
+.adicionar {
+  background-color: #8b0000;
+  color: #ffffff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.adicionar:hover {
+  background-color: #b22222;
+}
+
+/* Rodapé */
+.navegacao {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: #ffffff;
+  padding: 10px 0;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+body {
+  padding-bottom: 60px; /* Adiciona espaço suficiente para que o conteúdo não seja coberto pelo rodapé */
+}
+
+.icone {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.icone img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.icone img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  /* Ajustar tamanho do texto */
+  .titulo {
+    font-size: 1.8rem;
+  }
+
+  .descricao h2 {
+    font-size: 1.3rem;
+  }
+
+  .descricao p {
+    font-size: 0.9rem;
+  }
+
+  /* Garantir ajuste das colunas no cardápio */
+  .produtos {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .produto img {
+    max-width: 120px;
+  }
+
+  .adicionar {
+    font-size: 0.9rem;
+    padding: 5px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Reduzir margens e tamanhos gerais */
+  .descricao {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .produtos {
+    gap: 10px;
+  }
+
+  .produto {
+    padding: 8px;
+  }
+
+  .produto img {
+    max-width: 100px;
+  }
+
+  .icone img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .navegacao {
+    padding: 8px 0;
+  }
+}

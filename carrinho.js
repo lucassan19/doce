@@ -1,6 +1,7 @@
   // Carrinho (inicialmente vazio)
   let carrinho = [];
 
+
   // Função para adicionar itens ao carrinho
   function adicionarAoCarrinho(nome, preco) {
     // Verifica se o item já está no carrinho
@@ -123,5 +124,5 @@
     const botaoWhatsApp = document.getElementById('finalizarPedido');
     if (botaoWhatsApp) {
       botaoWhatsApp.addEventListener('click', redirecionarWhatsApp);
-    }
+}
   };
